@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "name": "Harbor Commercial Services",
+  "period": "FY2025",
+  "basis": "Accrual",
+  "currency": "USD",
+  "memo": "Fictional example. Review legal fees and equipment replacement before further analysis. No investment recommendation.",
+  "financials": {
+    "months": 12,
+    "revenue": 5000000,
+    "netIncome": 450000,
+    "interest": 80000,
+    "incomeTax": 70000,
+    "da": 100000
+  },
+  "price": {
+    "ev": 5000000,
+    "confirmed": true,
+    "sellerNote": 500000,
+    "earnout": 0,
+    "terms": "Assumed cash-free/debt-free EV; normal working capital delivered. $500,000 seller note is included in the $5 million EV, not added again. Fees excluded."
+  },
+  "cash": {
+    "newOpex": 30000,
+    "maintenance": 60000,
+    "growth": 20000,
+    "nwc": 40000,
+    "tax": 100000,
+    "other": 0,
+    "debtService": 360000
+  },
+  "stress": {
+    "revenueChange": -0.1,
+    "contribution": 0.4,
+    "extraCost": 20000
+  },
+  "adjustments": [
+    {
+      "id": "A1",
+      "label": "Remove departing owner compensation",
+      "category": "owner",
+      "origin": "seller",
+      "seller": 220000,
+      "buyer": 220000,
+      "status": "assumed",
+      "replacement": 120000,
+      "evidence": "Synthetic payroll summary",
+      "note": "Replacement includes salary, benefits, and employer taxes.",
+      "overlap": "",
+      "period": "FY2025"
+    },
+    {
+      "id": "A2",
+      "label": "Claimed nonrecurring legal fees",
+      "category": "normalization",
+      "origin": "seller",
+      "seller": 80000,
+      "buyer": null,
+      "status": "unresolved",
+      "replacement": 0,
+      "evidence": "",
+      "note": "Confirm dispute is resolved.",
+      "overlap": "",
+      "period": "FY2025"
+    },
+    {
+      "id": "A3",
+      "label": "Remove one-time project revenue",
+      "category": "normalization",
+      "origin": "buyer",
+      "seller": null,
+      "buyer": -25000,
+      "status": "assumed",
+      "replacement": 0,
+      "evidence": "Synthetic invoice review",
+      "note": "Negative adjustment: profit impact, not gross invoice value.",
+      "overlap": "",
+      "period": "FY2025"
+    },
+    {
+      "id": "A4",
+      "label": "Proposed supplier savings",
+      "category": "proforma",
+      "origin": "seller",
+      "seller": 50000,
+      "buyer": 0,
+      "status": "rejected",
+      "replacement": 0,
+      "evidence": "",
+      "note": "Uncontracted savings excluded.",
+      "overlap": "",
+      "period": "FY2025"
+    }
+  ]
+}
